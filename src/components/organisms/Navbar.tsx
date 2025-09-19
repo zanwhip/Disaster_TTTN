@@ -78,18 +78,16 @@ function Navbar() {
         }`}
       >
         {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src={LOGO.light}
-            alt="Logo"
-            width={270}
-            height={40}
-            priority
-            className={`transition duration-300 ${
-              !isWhiteBg ? "invert brightness-0" : ""
-            }`}
-          />
-        </Link>
+        <div
+      className={`whitespace-nowrap text-4xl font-extrabold bg-clip-text text-transparent ${
+        isWhiteBg
+          ? "bg-gradient-to-r from-blue-500 to-blue-800"
+          : "bg-gradient-to-r from-blue-400 via-blue-600 to-blue-800"
+      }`}
+    >
+      {isWhiteBg ? "GENSAI" : "GENSAI PLATFORM"}
+    </div>
+
 
         {/* Search bar (only for md+) */}
         <div
